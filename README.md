@@ -187,6 +187,8 @@ sprintf('The loaded image belongs to %s class', label)
 accuracy = mean(predictLabels == testSet.Labels);
 disp(['Mean accuracy = ' num2str(accuracy)])
 
+```
+
 # README: Comparison of MATLAB Classification Codes  
 
 This table highlights the **full AlexNet code** (baseline) and the **differences** for ResNet50, VGG16, and VGG19, along with descriptions.
@@ -268,4 +270,4 @@ title('First Convolutional Layer Weight');
 % title('First Convolutional Layer Weight')
 ``` | Visualizes first convolutional layer weights (active for ResNet50, commented for others). |
 
- 
+
