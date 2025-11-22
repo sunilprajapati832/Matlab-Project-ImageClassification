@@ -3,3 +3,12 @@ In this work, pretrained deep learning CNNs are deployed based on feature extrac
 
 ## Dataset - caltech-101 Downlaod link: 
 https://www.kaggle.com/datasets/imbikramsaha/caltech-101
+
+ ```matlab
+    % This is a simple MATLAB script
+    x = 1:10;
+    y = sin(x);
+    plot(x, y);
+    title('Sine Wave');
+    xlabel('x');
+    ylabel('sin(x)');
