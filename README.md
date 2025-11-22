@@ -344,3 +344,35 @@ title('First Convolutional Layer Weight');
 % figure
 % montage(w1)
 % title('First Convolutional Layer Weight')
+```
+
+# README: Comparison of MATLAB Classification Codes  
+
+This table highlights the **AlexNet baseline** and the **differences** for ResNet50, VGG16, and VGG19, along with descriptions.
+
+| **S.No.** | **AlexNet (Baseline)** | **ResNet50 (Differences only)** | **VGG16 (Differences only)** | **VGG19 (Differences only)** | **Code Description** |
+|-----------|-------------------------|---------------------------------|------------------------------|------------------------------|-----------------------|
+| 1 | `net = alexnet;` | `net = resnet50();` | `net = vgg16;` | `net = vgg19;` | Loads the respective pretrained CNN model. |
+| 2 | `% plot(net) ... title('Architecture of AlexNet')` | `figure; plot(net); title('Architecture of ResNet-50');` | `% plot(net) ... title('Architecture of VGG-16')` | `% plot(net) ... title('Architecture of VGG-19')` | Plots the network architecture (active for ResNet50, commented for others). |
+| 3 | `featureLayer = 'fc7';` | `featureLayer = 'fc1000';` | `featureLayer = 'fc7';` | `featureLayer = 'fc8';` | Defines which fully connected layer’s activations are used as features. |
+| 4 | `newImage = imread('image_7.jpg');` | `newImage = imread('image_7.jpg');` | `newImage = imread('Image_7.jpg');` | `newImage = imread('Image_3a.jpg');` | Loads a test image for classification (filename differs). |
+| 5 | `disp(['Mean accuracy = ' num2str(accuracy)])` | `disp(['Mean accuracy = ' num2str(accuracy * 100 )])` | `disp(['Mean accuracy = ' num2str(accuracy)])` | `disp(['Mean accuracy = ' num2str(accuracy)])` | Displays classification accuracy (ResNet50 shows percentage, others show fraction). |
+| 6 | `% montage(w1) ... title('First Convolutional Layer Weight')` | `figure; montage(w1); title('First Convolutional Layer Weight');` | `% montage(w1) ... title('First Convolutional Layer Weight')` | `% montage(w1) ... title('First Convolutional Layer Weight')` | Visualizes first convolutional layer weights (active for ResNet50, commented for others). |
+
+---
+
+## Full AlexNet Code (Baseline)
+
+```matlab
+net = alexnet;
+% figure
+% plot(net)
+% title('Architecture of AlexNet')
+% set(gca, 'YLim', [150 170]);
+
+featureLayer = 'fc7';
+newImage = imread(fullfile('image_7.jpg'));
+disp(['Mean accuracy = ' num2str(accuracy)])
+% figure
+% montage(w1)
+% title('First Convolutional Layer Weight')
