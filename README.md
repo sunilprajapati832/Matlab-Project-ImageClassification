@@ -173,3 +173,18 @@ sprintf('The loaded image belongs to %s class', label)
 accuracy = mean(predictLabels == testSet.Labels);
 disp(['Mean accuracy = ' num2str(accuracy)])
 ```
+
+## Note:  
+**AlexNet column** shows the entire baseline code. **ResNet50**, **VGG16**, **VGG19** columns show only the differences compared to AlexNet. Most preprocessing, dataset handling, training, and evaluation steps are identical across all four codes. The main differences are in:
+- Network initialization (alexnet, resnet50, vgg16, vgg19)
+- Feature layer selection (**fc7**, **fc1000**, **fc7**, **fc8**)
+- Architecture plotting (enabled for ResNet50, commented for others)
+- Test image filename (image_7.jpg, Image_7.jpg, Image_3a.jpg)
+- Accuracy display formatting (ResNet50 multiplies by 100 to show percentage).
+
+
+
+
+
+
+
