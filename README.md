@@ -271,3 +271,76 @@ title('First Convolutional Layer Weight');
 ``` | Visualizes first convolutional layer weights (active for ResNet50, commented for others). |
 
 
+matlab
+net = alexnet;
+``` | ```matlab
+net = resnet50();
+``` | ```matlab
+net = vgg16;
+``` | ```matlab
+net = vgg19;
+``` | Loads the respective pretrained CNN model (AlexNet, ResNet50, VGG16, VGG19). |
+| 2 | ```matlab
+% figure
+% plot(net)
+% title('Architecture of AlexNet')
+% set(gca,'YLim',[150 170]);
+``` | ```matlab
+figure;
+plot(net);
+title('Architecture of ResNet-50');
+set(gca,'YLim',[150 170]);
+``` | ```matlab
+% figure
+% plot(net)
+% title('Architecture of VGG-16')
+% set(gca,'YLim',[150 170]);
+``` | ```matlab
+% figure
+% plot(net)
+% title('Architecture of VGG-19')
+% set(gca,'YLim',[150 170]);
+``` | Plots the network architecture (active for ResNet50, commented for others). |
+| 3 | ```matlab
+featureLayer = 'fc7';
+``` | ```matlab
+featureLayer = 'fc1000';
+``` | ```matlab
+featureLayer = 'fc7';
+``` | ```matlab
+featureLayer = 'fc8';
+``` | Defines which fully connected layer’s activations are used as features. |
+| 4 | ```matlab
+newImage = imread(fullfile('image_7.jpg'));
+``` | ```matlab
+newImage = imread(fullfile('image_7.jpg'));
+``` | ```matlab
+newImage = imread(fullfile('Image_7.jpg'));
+``` | ```matlab
+newImage = imread(fullfile('Image_3a.jpg'));
+``` | Loads a test image for classification (filename differs across codes). |
+| 5 | ```matlab
+disp(['Mean accuracy = ' num2str(accuracy)])
+``` | ```matlab
+disp(['Mean accuracy = ' num2str(accuracy * 100 )])
+``` | ```matlab
+disp(['Mean accuracy = ' num2str(accuracy)])
+``` | ```matlab
+disp(['Mean accuracy = ' num2str(accuracy)])
+``` | Displays classification accuracy (ResNet50 shows percentage, others show fraction). |
+| 6 | ```matlab
+% figure
+% montage(w1)
+% title('First Convolutional Layer Weight')
+``` | ```matlab
+figure;
+montage(w1);
+title('First Convolutional Layer Weight');
+``` | ```matlab
+% figure
+% montage(w1)
+% title('First Convolutional Layer Weight')
+``` | ```matlab
+% figure
+% montage(w1)
+% title('First Convolutional Layer Weight')
