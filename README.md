@@ -222,6 +222,41 @@ disp(['Mean accuracy = ' num2str(accuracy)])
 - Accuracy display formatting (ResNet50 multiplies by 100 to show percentage).
 
 ## Results
+| Architecture | Feature Layer | Accuracy (Caltech-101) |
+|--------------|---------------|-------------------------|
+| AlexNet      | fc7           | 0.81478 – 0.80522 (~81%) |
+| ResNet-50    | fc1000        | 0.88348 – 0.88261 (~88%) |
+| VGG-16       | fc7           | 0.84957 – 0.86000 (~85%) |
+| VGG-19       | fc8           | 0.82870 – 0.82435 (~82%) |
+
+- **ResNet-50 achieved the highest accuracy (~88%)**, outperforming AlexNet, VGG-16, and VGG-19.  
+- **AlexNet** performed reasonably well (~81%) but was surpassed by deeper architectures.  
+- **VGG-16** showed strong performance (~85%), slightly better than VGG-19 (~82%).  
+- The comparison highlights that **deeper residual networks (ResNet-50)** are more effective for complex datasets like Caltech-101, thanks to their skip connections and ability to train very deep architectures without vanishing gradients.
+
+## Repository Structure
+├── classificationAlexNet.m   # Full code for AlexNet
+├── classificationResNet50.m  # Code with ResNet-50 differences
+├── classificationVGG16.m     # Code with VGG-16 differences
+├── classificationVGG19.m     # Code with VGG-19 differences
+├── README.md                 # Project documentation
+
+## System Setup
+- **OS:** Windows 7 (64-bit)
+- **CPU:** Intel Core i3 @ 2.40GHz
+- **RAM:** 3 GB
+- **Software:** MATLAB R2018a
+- **Toolboxes:**
+   * Deep Learning Toolbox™
+   * Statistics and Machine Learning Toolbox™
+   * Pretrained CNN Models (AlexNet, ResNet-50, VGG-16, VGG-19)
+
+
+
+
+
+
+
 
 
 
