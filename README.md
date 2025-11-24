@@ -1,6 +1,4 @@
 # Matlab-Project-ImageClassification
-In this work, pretrained deep learning CNNs are deployed based on feature extraction for training an image category classifier for image classifications of Caltech-101 image dataset. In two research structures are implemented, in first structure Caltech-101 image datasets is used to find accuracy for image category classifications of four pretrained CNN architectures (i.e. ResNet-50, AlexNet, VGG-16, and VGG-19). This dataset contains images of different categories for image classification. In the second research structure all different CNN architecture's performances are compared. Here both the research structures are deployed on CPU system, with same parameters (size, epochs) of different images and their accuracies are obtained.
-
 ## Project Overview
 This repository contains the implementation and results of my Master’s thesis project: “Performance Comparison of CNN Architectures for Classification of Caltech-101 Image Dataset”. The project evaluates and compares the performance of four popular pretrained Convolutional Neural Network (CNN) architectures — AlexNet, ResNet-50, VGG-16 and VGG-19 — for image classification on the Caltech-101 dataset. The work demonstrates how pretrained CNNs can be used as feature extractors combined with a Support Vector Machine (SVM) classifier to achieve high accuracy without training networks from scratch.
 
@@ -235,11 +233,13 @@ disp(['Mean accuracy = ' num2str(accuracy)])
 - The comparison highlights that **deeper residual networks (ResNet-50)** are more effective for complex datasets like Caltech-101, thanks to their skip connections and ability to train very deep architectures without vanishing gradients.
 
 ## Repository Structure
-├── classificationAlexNet.m   # Full code for AlexNet
-├── classificationResNet50.m  # Code with ResNet-50 differences
-├── classificationVGG16.m     # Code with VGG-16 differences
-├── classificationVGG19.m     # Code with VGG-19 differences
-├── README.md                 # Project documentation
+├── Images
+├── MATLAB_Code_Files
+    ├── classificationAlexNet.m   # Full code for AlexNet
+    ├── classificationResNet50.m  # Code with ResNet-50 differences
+    ├── classificationVGG16.m     # Code with VGG-16 differences
+    ├── classificationVGG19.m     # Code with VGG-19 differences
+├── README.md                     # Project documentation
 
 ## System Setup
 - **OS:** Windows 7 (64-bit)
