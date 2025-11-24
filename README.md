@@ -251,17 +251,32 @@ disp(['Mean accuracy = ' num2str(accuracy)])
    * Statistics and Machine Learning Toolbox™
    * Pretrained CNN Models (AlexNet, ResNet-50, VGG-16, VGG-19)
 
+## How to Run
+- Clone this repository: git clone https://github.com/sunilprajapati832/Matlab-Project-ImageClassification.git
+- Open MATLAB and navigate to the project folder.
+- Run any of the scripts (classificationAlexNet.m, classificationResNet50.m, etc.).
+- The script will:
+    * Load the dataset.
+    * Extract features using the chosen CNN.
+    * Train an SVM classifier.
+    * Display accuracy and classification results.
 
+## Conclusion
+- Pretrained CNNs are powerful feature extractors for image classification.
+- Among the tested architectures, **ResNet-50 performed best** on Caltech-101 with ~88% accuracy.
+- This project demonstrates the effectiveness of transfer learning and feature extraction in deep learning tasks.
 
+## References
+- Krizhevsky et al., ImageNet Classification with Deep Convolutional Neural Networks (2012).
+- He et al., Deep Residual Learning for Image Recognition (2016).
+- Simonyan & Zisserman, Very Deep Convolutional Networks for Large-Scale Image Recognition (2015).
+- Caltech-101 Dataset: **Caltech Vision**
 
+## License
+This project is licensed under the **MIT License (Attribution Required)**.  
+If you use or share this work, please credit **Sunil Prajapati** and include a link to this repository.  
 
-
-
-
-
-
-
-
-
-
-
+## Author
+**Sunil Prajapati**  
+If you found this project interesting, let’s connect!  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20Me-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/sunil-prajapati832)
