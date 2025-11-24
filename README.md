@@ -1,8 +1,47 @@
 # Matlab-Project-ImageClassification
 In this work, pretrained deep learning CNNs are deployed based on feature extraction for training an image category classifier for image classifications of Caltech-101 image dataset. In two research structures are implemented, in first structure Caltech-101 image datasets is used to find accuracy for image category classifications of four pretrained CNN architectures (i.e. ResNet-50, AlexNet, VGG-16, and VGG-19). This dataset contains images of different categories for image classification. In the second research structure all different CNN architecture's performances are compared. Here both the research structures are deployed on CPU system, with same parameters (size, epochs) of different images and their accuracies are obtained.
 
+## Project Overview
+This repository contains the implementation and results of my Master’s thesis project: “Performance Comparison of CNN Architectures for Classification of Caltech-101 Image Dataset”. The project evaluates and compares the performance of four popular pretrained Convolutional Neural Network (CNN) architectures — AlexNet, ResNet-50, VGG-16 and VGG-19 — for image classification on the Caltech-101 dataset. The work demonstrates how pretrained CNNs can be used as feature extractors combined with a Support Vector Machine (SVM) classifier to achieve high accuracy without training networks from scratch.
+
+## Objectives
+- To implement multiple pretrained CNN architectures in MATLAB.
+- To extract deep features from each network and train a multiclass SVM classifier.
+- To evaluate classification accuracy on the Caltech-101 dataset.
+- To compare the performance of AlexNet, ResNet-50, VGG-16 and VGG-19.
+
 ## Dataset - caltech-101 Downlaod link: 
-https://www.kaggle.com/datasets/imbikramsaha/caltech-101
+**Caltech-101 Dataset** https://www.kaggle.com/datasets/imbikramsaha/caltech-101
+- 9,146 images across 101 object categories + 1 background category.
+- Each class contains ~40–800 images.
+- Image size ~300 × 200 pixels.
+- Categories include objects like airplanes, anchor, butterfly, chair, dolphin, elephant, etc.
+
+## Methodology
+**1. Dataset Preparation**
+- Images loaded using MATLAB’s **imageDatastore**.
+- Balanced dataset created using **splitEachLabel**.
+- Augmented with **augmentedImageDatastore** for resizing and RGB conversion.
+
+**2. Pretrained CNNs Used**
+- AlexNet
+- ResNet-50
+- VGG-16
+- VGG-19
+
+**3. Feature Extraction**
+- Extracted features from fully connected layers:
+  * AlexNet → fc7
+  * ResNet-50 → fc1000
+  * VGG-16 → fc7
+  * VGG-19 → fc8
+
+**4. Classifier** 
+- Trained a **multiclass SVM** (fitcecoc) using extracted features.
+
+**5. Evaluation**
+- Confusion matrix used for performance analysis.
+- Accuracy calculated as mean of correctly classified labels.
 
 ## Comparison of MATLAB Classification Codes  
 This table highlights the **AlexNet baseline** and the **differences** for ResNet50, VGG16, and VGG19, along with descriptions.
@@ -17,7 +56,7 @@ This table highlights the **AlexNet baseline** and the **differences** for ResNe
 
 ## Full AlexNet Code (Baseline)
 ```matlab
- % MATLAB scripts
+% MATLAB scripts
 % classificationAlexNet.m
 outputFolder = fullfile('caltech101');
 rootFolder = fullfile(outputFolder, '101_ObjectCategories');
@@ -181,6 +220,9 @@ disp(['Mean accuracy = ' num2str(accuracy)])
 - Architecture plotting (enabled for ResNet50, commented for others)
 - Test image filename (image_7.jpg, Image_7.jpg, Image_3a.jpg)
 - Accuracy display formatting (ResNet50 multiplies by 100 to show percentage).
+
+## Results
+
 
 
 
