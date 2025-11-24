@@ -3,7 +3,7 @@
 This repository contains the implementation and results of my **Master’s thesis** project: **“Performance Comparison of CNN Architectures for Classification of Caltech-101 Image Dataset”**. The project evaluates and compares the performance of four popular **pretrained Convolutional Neural Network (CNN) architectures** — AlexNet, ResNet-50, VGG-16 and VGG-19 — for **image classification** on the Caltech-101 dataset. The work demonstrates how pretrained CNNs can be used as **feature extractors** combined with a **Support Vector Machine (SVM) classifier** to achieve high accuracy without training networks from scratch.
 
 ## Objectives
-- To implement multiple pretrained CNN architectures in MATLAB.
+- To implement multiple pretrained CNN architectures in **MATLAB**.
 - To extract deep features from each network and train a multiclass SVM classifier.
 - To evaluate classification accuracy on the Caltech-101 dataset.
 - To compare the performance of AlexNet, ResNet-50, VGG-16 and VGG-19.
